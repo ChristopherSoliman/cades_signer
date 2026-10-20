@@ -1,0 +1,16 @@
+[package]
+name = "cades_signer"
+version = "0.1.0"
+edition = "2024"
+
+[build]
+target = "x86_64-apple-darwin"
+
+[dependencies]
+sha256 = "1.5.0"
+sha1_smol = "1.0.1"
+libloading = "0.8"
+der = {version = "0.7.9", features=["flagset", "arbitrary", "derive", "alloc", "oid"]}
+x509-cert = {version = "0.2.5", features = ["builder"]}
+cms = {version = "0.2.3",features = ["builder"]}
+base64 = "0.22.1"
